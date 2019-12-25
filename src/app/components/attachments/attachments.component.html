@@ -1,0 +1,33 @@
+<div id="attachmentTypes">
+
+    <div class="d-flex flex-row" *ngFor="let item of attachmentTypes">
+      <div class="p-2" style="cursor: pointer;" (click)="chooseAttachment(item.type)" >
+        <div class="card">
+          <img src="{{item.imgurl}}" class="card-img-top" >
+          <p>{{item.name}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="attachmentList" *ngFor="let item of attachmentList">
+  
+    <div class="cardt">
+      <div class="imgbox">
+        <img src="{{item.imgurl}}" class="card-img-top">    
+      </div>
+     
+      <div class="textbox">
+        <p class="h3" style="text-align: center;">{{item.name}}</p>
+      </div>
+      
+      <div class="tierbox">
+       <button class="btn btn-primary">More Info</button>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  

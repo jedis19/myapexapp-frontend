@@ -1,0 +1,27 @@
+<div class="characterList">
+
+    <div class="cardt" *ngFor="let item of characters" >
+      <div class="imgbox">
+        <img src="{{item.imgUrl}}" class="card-img-top">    
+      </div>
+     
+      <div class="namebox">
+        <p class="h4" style="text-align: center; color: paleturquoise;">{{item.name}}</p>
+        <p class="h5" style="text-align: center;color: palegreen;">{{item.type}}</p>
+      </div>
+  
+
+      <div class="skillbox">
+        <p class="h3" style="text-align: center;color:palegoldenrod;">Skills</p>
+        <div style="display: flex; margin: auto;margin-top: -5px; flex-direction: column;">
+          <p style="font-size: 13px; margin-left: 4px;"><img src="{{item.firstspellurl}}" style="width: auto;height: 40px;">{{item.firstspellname | limitTo:'16'}}</p>
+          <p style="font-size: 13px; margin-left: 4px;"><img src="{{item.secondspellurl}}" style="width: auto;height: 40px;">{{item.secondspellname}}</p>
+          <p style="font-size: 13px; margin-left: 4px;"><img src="{{item.thirdspellurl}}" style="width: auto;height: 40px;">{{item.thirdspellname | limitTo:'16'}}</p>
+          <button type="button" class="btn btn-info">More Info</button>
+        </div>
+      </div>
+      
+      
+    </div>
+  
+  </div>

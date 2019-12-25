@@ -1,0 +1,35 @@
+<div id="weaponTypes">
+  <div class="d-flex flex-row">
+    <div class="p-2" style="cursor: pointer;" *ngFor="let item of weaponTypes">
+      <div class="card" (click)="chooseWeapon(item.type)">
+        <img src={{item.imgUrl}} class="card-img-top" >
+        <p>{{item.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="weaponList">
+
+  <div class="cardt" *ngFor="let item of weaponList">
+    <div class="imgbox">
+      <img src="{{item.imgurl}}" class="card-img-top">    
+    </div>
+   
+    <div class="textbox">
+      <p class="h3" style="text-align: center;">{{item.name}}</p>
+      <div style="display: flex; margin: auto;margin-top: -5px;">
+        <img src="../../../assets/aimm.png" style="width: 20px;"><p style="font-size: 13px; margin-left: 5px;">{{item.basedamage}}</p>
+        <img style="margin-left: 15px;" src="../../../assets/bullet.png"><p style="font-size: 13px;margin-left: 5px;">{{item.magazine}}</p>
+      </div>
+    </div>
+    
+    <div class="tierbox">
+      <p class="h3" style="text-align: center;">TIER</p>
+      <p class="h5" style="margin: auto; color:tomato;">{{item.tier}}</p>
+    </div>
+
+  </div>
+
+</div>
+
